@@ -13,7 +13,7 @@ export default function NewMessageForm() {
             return
         }
         AddNewMessage(newMessage)
-        event.target.reset(); // Limpia el formulario después de enviar
+        event.target.reset()
     }
     
     return (
@@ -21,7 +21,7 @@ export default function NewMessageForm() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="newMessage">Nuevo Mensaje</label>
-                    <textarea name="newMessage" id="newMessage" minLength={5} required> </textarea>
+                    <textarea name="newMessage" id="newMessage" minLength={5} required></textarea>
                 </div>
                 <button type="submit">Enviar</button>
             </form>

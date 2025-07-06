@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 export default function ContactItem({ id, name, image_route, last_message, last_message_date, unread_messages }) {
     return (
         <div>
-            <Link to={`/message/${id}`}>
+            <Link to={`/contact/${id}/messages`}>
                 <img src={image_route} alt={`Imagen de contacto ${name}`} />
                 <div>
                     <h3>{name}</h3>

@@ -1,0 +1,203 @@
+/* Container principal */
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Logo container */
+.logo-container {
+    position: relative;
+}
+
+.logo-wrapper {
+    position: relative;
+    animation: logoScale 2s ease-in-out infinite;
+}
+
+.logo-background {
+    background-color: #22c55e;
+    border-radius: 50%;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: logoShadow 1.5s ease-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    width: 3rem;
+    height: 3rem;
+    color: white;
+}
+
+/* Efecto de pulso */
+.pulse-effect {
+    position: absolute;
+    inset: 0;
+    background-color: #4ade80;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: pulseEffect 1.8s ease-in-out infinite;
+}
+
+/* Texto de carga */
+.text-container {
+    text-align: center;
+    animation: textFade 1.5s ease-in-out infinite;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #15803d;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #16a34a;
+    margin: 0;
+}
+
+/* Puntos de carga */
+.dots-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #22c55e;
+    border-radius: 50%;
+    animation: dotBounce 0.8s ease-in-out infinite;
+}
+
+.dot-1 {
+    animation-delay: 0s;
+}
+
+.dot-2 {
+    animation-delay: 0.2s;
+}
+
+.dot-3 {
+    animation-delay: 0.4s;
+}
+
+/* Spinner circular */
+.spinner-circle {
+    width: 4rem;
+    height: 4rem;
+    border: 4px solid #bbf7d0;
+    border-top: 4px solid #22c55e;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animaciones */
+@keyframes logoScale {
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.05) rotate(2deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(0deg);
+    }
+    75% {
+        transform: scale(1.05) rotate(-2deg);
+    }
+}
+
+@keyframes logoShadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(34, 197, 94, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+@keyframes pulseEffect {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+@keyframes textFade {
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes dotBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .loading-content {
+        gap: 1rem;
+    }
+
+    .logo-background {
+        padding: 1rem;
+    }
+
+    .logo-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .spinner-circle {
+        width: 3rem;
+        height: 3rem;
+    }
+}
