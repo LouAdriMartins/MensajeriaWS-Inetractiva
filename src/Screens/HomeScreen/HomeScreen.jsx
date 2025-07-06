@@ -1,13 +1,11 @@
 import React from 'react'
-import Chat from '../../Components/Chat/Chat'
-import NewMessageForm from "../../Components/NewMessageForm/NewMessageForm"
-
+import Contacts from '../../Components/ContactList/ContactsList'
 
 export default function HomeScreen() {
     return (
         <div>
-            <Chat/>
-            <NewMessageForm/>
+            <Contacts />
         </div>
     )
-}
+    }
+
