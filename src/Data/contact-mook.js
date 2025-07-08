@@ -4,20 +4,20 @@
 // como una base de datos.
 //------------------------------------------------------------------------------------------------------------------------------------
 // Importación de imágenes para los contactos
-import bombonImg from './Images/bombon.webp'
-import burbujaImg from './Images/burbuja.png'
-import bellotaImg from './Images/bellota.jpg'
-import plutonioImg from './Images/plutonio.jpg'
-import alcaldeImg from './Images/alcalde.jpg'
-import mojoJojoImg from './Images/mojo-jojo.jpg'
-import beloImg from './Images/belo.jpg'
+import bombonImg from './Images/lola.webp'
+import burbujaImg from './Images/bonny.jpg'
+import bellotaImg from './Images/lucas.jpg'
+import plutonioImg from './Images/piolin.png'
+import alcaldeImg from './Images/porky.jpg'
+import mojoJojoImg from './Images/michael.png'
+import beloImg from './Images/taz.jpg'
 //------------------------------------------------------------------------------------------------------------------------------------
 
 const mook_data = {
     contacts: [
         {
             id: 1,
-            name: 'Bombon',
+            name: 'Lola Bunny',
             image_route: bombonImg,
             phone: '+54 299 563 8542',
             info: '¡No puedo recordar nada! Y eso que yo recuerdo todo lo que hice en la vida.',
@@ -25,7 +25,7 @@ const mook_data = {
             hora: '01/06/2025',
             last_message: {
                 id: 1,
-                text: 'Hola Bombon, como estas?',
+                text: 'Hola Lola, como estas?',
                 status: true,
             },
             unread_messages: 2,
@@ -38,7 +38,7 @@ const mook_data = {
                 },
                 {
                     id: 2,
-                    emisor: 'Bombon',
+                    emisor: 'Lola Bunny',
                     hora: '01/06/2025',
                     text: 'Todo bien, y vos?',
                     status: true,
@@ -47,7 +47,7 @@ const mook_data = {
         },
         {
             id: 2,
-            name: 'Burbuja',
+            name: 'Bugs Bunny',
             image_route: burbujaImg,
             phone: '+54 294 423 8025',
             info: '¡La vida es tan lindaaaa!',
@@ -69,7 +69,7 @@ const mook_data = {
                 },
                 {
                     id: 2,
-                    emisor: 'Burbuja',
+                    emisor: 'Bugs Bunny',
                     hora: '02/07/2025',
                     text: '¡Qué bueno! Me alegro',
                     status: false,
@@ -78,7 +78,7 @@ const mook_data = {
         },
         {
             id: 3,
-            name: 'Bellota',
+            name: 'Pato Lucas',
             image_route: bellotaImg,
             phone: '+54 263 555 2082',
             info: '¡A pelear!',
@@ -100,7 +100,7 @@ const mook_data = {
                 },
                 {
                     id: 2,
-                    emisor: 'Bellota',
+                    emisor: 'Pato Lucas',
                     hora: '05/05/2025',
                     text: 'Que tenemos que juntarnos a conversar ❤️',
                     status: false,
@@ -109,7 +109,7 @@ const mook_data = {
         },
         {
             id: 4,
-            name: 'Prof. Plutonio',
+            name: 'Piolín',
             image_route: plutonioImg,
             phone: '+54 685 326 2856',
             info: '¡Azúcar, flores y muchos colores!',
@@ -131,7 +131,7 @@ const mook_data = {
                 },
                 {
                     id: 2,
-                    emisor: 'Prof. Plutonio',
+                    emisor: 'Piolín',
                     hora: '25/06/2025',
                     text: 'Muy bien, ocupado creando!',
                     status: true,
@@ -140,7 +140,7 @@ const mook_data = {
         },
         {
             id: 5,
-            name: 'Mojo-jojo',
+            name: 'Michael Jordan',
             image_route: mojoJojoImg,
             phone: '+54 333 256 1234',
             info: 'Jajaja... ¡Soy demasiado listo para ustedes!',
@@ -162,7 +162,7 @@ const mook_data = {
                 },
                 {
                     id: 2,
-                    emisor: 'Mojo-jojo',
+                    emisor: 'Michael Jordan',
                     hora: '04/04/2025',
                     text: 'Bien, ya casi termino la tarea de Front-End.',
                     status: true,
@@ -171,7 +171,7 @@ const mook_data = {
         },
         {
             id: 6,
-            name: 'El Alcalde',
+            name: 'Porky',
             image_route: alcaldeImg,
             phone: '+54 662 823 5325',
             info: '¡Alcalde quiere brindis!',
@@ -193,7 +193,7 @@ const mook_data = {
                 },
                 {
                     id: 2,
-                    emisor: 'El Alcalde',
+                    emisor: 'Porky',
                     hora: '25/05/2025',
                     text: 'Perfecto, nos juntamos en casa de Mojo para cocinar.',
                     status: true,
@@ -202,7 +202,7 @@ const mook_data = {
         },
         {
             id: 7,
-            name: 'Srta. Belo',
+            name: 'Tazmania',
             image_route: beloImg,
             phone: '+54 321 523 2525',
             info: '¡Oh señor alcalde, tenemos una emergencia!',
@@ -224,7 +224,7 @@ const mook_data = {
                 },
                 {
                     id: 2,
-                    emisor: 'Srta. Belo',
+                    emisor: 'Tazmania',
                     hora: '23:16',
                     text: 'Gracias, nos vemos pronto.',
                     status: true,
