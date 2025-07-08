@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import { MessageContext } from '../../Context/MessageContext'
+import './NewMessageForm.css'
 
 export default function NewMessageForm() {
     const { AddNewMessage } = useContext(MessageContext);
@@ -8,21 +9,18 @@ export default function NewMessageForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newMessage = event.target.newMessage.value;
-        if (newMessage.length < 5) {
-            alert("El mensaje debe tener al menos 5 caracteres.")
-            return
+        if (newMessage.trim() === "") {
+            alert("El mensaje no puede estar vacío.")
+            return;
         }
-        AddNewMessage(newMessage)
-        event.target.reset()
+        AddNewMessage(newMessage);
+        event.target.reset();
     }
     
     return (
-        <div>
+        <div className="new-message-form-container">
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="newMessage">Nuevo Mensaje</label>
-                    <textarea name="newMessage" id="newMessage" minLength={5} required></textarea>
-                </div>
+                <textarea name="newMessage" id="newMessage" placeholder="Escribe un mensaje..."></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </div>

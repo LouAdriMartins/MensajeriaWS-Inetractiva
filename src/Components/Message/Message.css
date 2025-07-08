@@ -1,0 +1,84 @@
+.chat-dialog {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+  box-shadow: 0 1px 1.5px rgba(0,0,0,0.13);
+}
+
+.my-message {
+  background-color: #dcf8c6;
+  align-self: flex-end; /* derecha */
+  border-bottom-right-radius: 0;
+  color: #202c16;
+}
+
+.their-message {
+  background-color: #fff;
+  align-self: flex-start; /* izquierda */
+  border-bottom-left-radius: 0;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+.message-text {
+  margin-bottom: 6px;
+}
+
+.message-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 11px;
+  color: #555;
+}
+
+.hora {
+  font-size: 11px;
+  color: #888;
+  user-select: none;
+}
+
+.status-icon {
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 6px;
+  color: #666666;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  color: #e74c3c;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .chat-dialog {
+    max-width: 90%;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .hora {
+    font-size: 10px;
+  }
+  .status-icon,
+  .delete-btn {
+    font-size: 14px;
+  }
+}

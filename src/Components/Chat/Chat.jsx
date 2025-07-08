@@ -1,32 +1,27 @@
-import React from "react"
-import Message from "../Message/Message"
-import { useContext } from "react"
-import { MessageContext } from "../../Context/MessageContext"
+import React, { useContext } from "react";
+import Message from "../Message/Message";
+import { MessageContext } from "../../Context/MessageContext";
+import "./Chat.css";
 
 export default function Chat() {
-    const {messages} = useContext(MessageContext)
+    const { messages } = useContext(MessageContext);
 
-    if (messages.length === 0) {
-        return (
-            <div>
-                <span>No hay mensajes en la bandeja de entrada!</span>
-            </div>
-        )
+    if (!messages || messages.length === 0) {
+        return <div className="empty-chat">No hay mensajes en la bandeja de entrada!</div>;
     }
+
     return (
-        <div>
-        {messages.map((message) => {
-            return (
+        <div className="chat-container">
+        {messages.map((message) => (
             <Message
-                key={message.id}
-                id={message.id}
-                emisor={message.emisor}
-                hora={message.hora}
-                texto={message.texto}
-                status={message.status}
+            key={message.id}
+            id={message.id}
+            emisor={message.emisor}
+            hora={message.hora}
+            text={message.text}
+            status={message.status}
             />
-            );
-        })}
+        ))}
         </div>
     );
 }

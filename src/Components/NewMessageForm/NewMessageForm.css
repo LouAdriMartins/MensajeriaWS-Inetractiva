@@ -1,0 +1,42 @@
+.new-message-form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.new-message-form-container form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.new-message-form-container textarea {
+  flex: 1;
+  resize: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.new-message-form-container textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+.new-message-form-container button {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-message-form-container button:hover {
+  background-color: #16a34a;
+}

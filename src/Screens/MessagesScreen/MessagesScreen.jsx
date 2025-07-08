@@ -1,24 +1,6 @@
-import React, { useContext, useEffect } from 'react'
-import Chat from '../../Components/Chat/Chat'
-import NewMessageForm from "../../Components/NewMessageForm/NewMessageForm"
-import { useParams } from 'react-router'
-import { MessageContext } from '../../Context/MessageContext'
-
+import React from 'react'
+import MessageList from '../../Components/ChatList/ChatList'
 
 export default function MessagesScreen() {
-    const {contact_id} = useParams()
-    const {loadMessages} = useContext(MessageContext)
-
-    useEffect(
-        () => {
-            loadMessages(contact_id)
-        },
-        [contact_id]
-    )
-    return (
-        <div>
-            <Chat/>
-            <NewMessageForm/>
-        </div>
-    )
+    return <MessageList />
 }

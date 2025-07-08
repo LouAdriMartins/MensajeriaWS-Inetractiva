@@ -14,16 +14,26 @@ export const MessageContext = createContext(
         messages: [],
         handleDeleteMessages: (id_message) => {},
         AddNewMessage: (text) => {},
-        loadMessages: (contact_id) => {}
+        loadMessages: (contact_id) => {},
+        isLoadingMessages: true
     }
 );
 
 const MessageContextProvider = ({ children }) => {
     const [messages, setMessages] = useState([])
+    const [idCounter, setIdCounter] = useState(1);
+    const [isLoadingMessages, setIsLoadingMessages] = useState(true)
 
     const loadMessages = (contact_id) => {
-        const messagesList = getMessagesByContactId(contact_id)
-        setMessages(messagesList)
+        setIsLoadingMessages(true)
+        setTimeout(
+            () => {
+                const messagesList = getMessagesByContactId(contact_id)
+                setMessages(messagesList)
+                setIsLoadingMessages(false)
+            },
+            1000
+        )
     }
 
     const handleDeleteMessages = (id_message) => {
@@ -44,12 +54,13 @@ const MessageContextProvider = ({ children }) => {
             minute: '2-digit',
             hour12: true,
         }),
-        id: Date.now(),
-        texto: text,
+        id: idCounter,
+        text: text,
         }
         const cloneMessages = [...messages]
         cloneMessages.push(newMessage)
         setMessages(cloneMessages)
+        setIdCounter(idCounter + 1)
     };
     return (
         <MessageContext.Provider
@@ -58,6 +69,7 @@ const MessageContextProvider = ({ children }) => {
                 handleDeleteMessages: handleDeleteMessages,
                 AddNewMessage: AddNewMessage,
                 loadMessages: loadMessages,
+                isLoadingMessages: isLoadingMessages
             }}
         >
             {children}

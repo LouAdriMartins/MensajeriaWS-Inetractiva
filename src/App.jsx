@@ -5,6 +5,7 @@ import ContactDetailScreen from "./Screens/ContactDetailScreen/ContactDetailScre
 import { Routes, Route } from "react-router"
 import MessageContextProvider from './Context/MessageContext.jsx'
 import HomeContactContextProvider from './Context/HomeContactContext.jsx'
+import ContactDetailContextProvider from "./Context/ContactDetailContext.jsx"
 
 function App() {
   return (
@@ -25,8 +26,11 @@ function App() {
               </MessageContextProvider>}
           />
         <Route
-          path="/contactDetail/:contact_id"
-          element={<ContactDetailScreen />}
+          path="/contact/:contact_id/detail"
+          element={
+            <ContactDetailContextProvider>
+              <ContactDetailScreen />
+            </ContactDetailContextProvider>}
         />
       </Routes>
     </div>

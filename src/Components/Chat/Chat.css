@@ -1,0 +1,8 @@
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* espacio entre mensajes */
+  padding: 12px;
+  height: 100%;
+  overflow-y: auto;
+}
