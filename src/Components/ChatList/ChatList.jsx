@@ -1,11 +1,13 @@
 import React, { useContext, useEffect } from 'react'
+import { useParams } from 'react-router'
 import Chat from "../Chat/Chat"
 import NewMessageForm from "../NewMessageForm/NewMessageForm"
 import LoaderSpinner from "../LoaderSppiner/LoaderSpinner"
-import { useParams, Link } from 'react-router'
 import { MessageContext } from "../../Context/MessageContext"
+import ContactDetailHeader from '../ContactDetailHeader/ContactDetailHeader'
+import './ChatList.css'
 
-export default function MessageList() {
+export default function ChatList() {
     const { contact_id } = useParams()
     const { loadMessages, isLoadingMessages } = useContext(MessageContext)
 
@@ -18,10 +20,10 @@ export default function MessageList() {
     }
 
     return (
-        <div>
-            <Link to={`/contact/${contact_id}/detail`}>Ir a detalle de contacto!</Link>
+        <div className='principal-chat-screen'>
+            <ContactDetailHeader />
             <Chat />
-            <NewMessageForm />
+            <NewMessageForm className='principal-chat-screen--message-form'/>
         </div>
     )
 }

@@ -4,13 +4,14 @@
 // como una base de datos.
 //------------------------------------------------------------------------------------------------------------------------------------
 // Importación de imágenes para los contactos
-import bombonImg from './Images/lola.webp'
-import burbujaImg from './Images/bonny.jpg'
-import bellotaImg from './Images/lucas.jpg'
-import plutonioImg from './Images/piolin.png'
-import alcaldeImg from './Images/porky.jpg'
-import mojoJojoImg from './Images/michael.png'
-import beloImg from './Images/taz.jpg'
+import lolaImg from './Images/lola.webp'
+import bunnyImg from './Images/bonny.jpg'
+import lucasImg from './Images/lucas.jpg'
+import pioImg from './Images/piolin.png'
+import porkyImg from './Images/porky.jpg'
+import mickImg from './Images/michael.png'
+import tazImg from './Images/taz.jpg'
+import silvesImg from './Images/Silves.jpg'
 //------------------------------------------------------------------------------------------------------------------------------------
 
 const mook_data = {
@@ -18,29 +19,30 @@ const mook_data = {
         {
             id: 1,
             name: 'Lola Bunny',
-            image_route: bombonImg,
+            image_route: lolaImg,
             phone: '+54 299 563 8542',
-            info: '¡No puedo recordar nada! Y eso que yo recuerdo todo lo que hice en la vida.',
+            info: 'No vuelvas a llamarme muñeca!',
             info_date: '20 de mayo del 2015',
             hora: '01/06/2025',
             last_message: {
                 id: 1,
-                text: 'Hola Lola, como estas?',
+                text: 'Aprendiendo Front-End.',
                 status: true,
             },
             unread_messages: 2,
             messages: [
                 {
+                    id: 101,
                     emisor: 'YO',
                     hora: '01/06/2025',
-                    text: 'Hola que tal?',
+                    text: 'Hola que tal Lola?',
                     status: true,
                 },
                 {
-                    id: 2,
+                    id: 102,
                     emisor: 'Lola Bunny',
                     hora: '01/06/2025',
-                    text: 'Todo bien, y vos?',
+                    text: 'Todo muy bien! Y vos?',
                     status: true,
                 },
             ],
@@ -48,30 +50,37 @@ const mook_data = {
         {
             id: 2,
             name: 'Bugs Bunny',
-            image_route: burbujaImg,
+            image_route: bunnyImg,
             phone: '+54 294 423 8025',
-            info: '¡La vida es tan lindaaaa!',
+            info: '¿Qué hay de nuevo, viejo?',
             info_date: '30 de junio del 2018',
             hora: '02/07/2025',
             last_message: {
                 id: 2,
-                text: 'Hola, qué tal?',
+                text: 'Te parece si nos juntamos el sabado que viene?',
                 status: false,
             },
-            unread_messages: 1,
+            unread_messages: 3,
             messages: [
                 {
-                    id: 1,
+                    id: 101,
                     emisor: 'YO',
                     hora: '02/07/2025',
-                    text: 'Si, hoy aprendí estados',
+                    text: 'No sabes lo que me paso. Tenemos que juntarnos',
                     status: true,
                 },
                 {
-                    id: 2,
+                    id: 102,
                     emisor: 'Bugs Bunny',
                     hora: '02/07/2025',
-                    text: '¡Qué bueno! Me alegro',
+                    text: 'Si, me encanta la idea, hace mucho que no nos vemos',
+                    status: false,
+                },
+                {
+                    id: 103,
+                    emisor: 'Bugs Bunny',
+                    hora: '02/07/2025',
+                    text: 'Cuentame que te paso?',
                     status: false,
                 },
             ],
@@ -79,27 +88,27 @@ const mook_data = {
         {
             id: 3,
             name: 'Pato Lucas',
-            image_route: bellotaImg,
+            image_route: lucasImg,
             phone: '+54 263 555 2082',
-            info: '¡A pelear!',
+            info: '¡Eres despreciable!',
             info_date: '02 de enero del 2019',
             hora: '05/05/2025',
             last_message: {
                 id: 3,
-                text: 'Hola, te extraño 😿',
+                text: 'Te extraño 😿',
                 status: false,
             },
-            unread_messages: 0,
+            unread_messages: 1,
             messages: [
                 {
-                    id: 1,
+                    id: 101,
                     emisor: 'YO',
                     hora: '05/05/2025',
-                    text: 'Eso que significa?',
+                    text: 'Hola querido Lucas, Eso que significa?',
                     status: false,
                 },
                 {
-                    id: 2,
+                    id: 102,
                     emisor: 'Pato Lucas',
                     hora: '05/05/2025',
                     text: 'Que tenemos que juntarnos a conversar ❤️',
@@ -110,30 +119,30 @@ const mook_data = {
         {
             id: 4,
             name: 'Piolín',
-            image_route: plutonioImg,
+            image_route: pioImg,
             phone: '+54 685 326 2856',
-            info: '¡Azúcar, flores y muchos colores!',
+            info: '¡Me parecio ver un lindo gatito!',
             info_date: '15 de abril del 2020',
             hora: '25/06/2025',
             last_message: {
                 id: 4,
-                text: 'Tanto tiempo!!!',
+                text: 'Tanto tiempo sin verte!!!',
                 status: true,
             },
-            unread_messages: 2,
+            unread_messages: 0,
             messages: [
                 {
-                    id: 1,
+                    id: 101,
                     emisor: 'YO',
                     hora: '25/06/2025',
-                    text: 'Hola, ¿cómo has estado?',
+                    text: 'Hola, ¿cómo has estado Pio?',
                     status: true,
                 },
                 {
-                    id: 2,
+                    id: 102,
                     emisor: 'Piolín',
                     hora: '25/06/2025',
-                    text: 'Muy bien, ocupado creando!',
+                    text: 'Muy bien, bastante ocupado creando!',
                     status: true,
                 },
             ],
@@ -141,27 +150,27 @@ const mook_data = {
         {
             id: 5,
             name: 'Michael Jordan',
-            image_route: mojoJojoImg,
+            image_route: mickImg,
             phone: '+54 333 256 1234',
-            info: 'Jajaja... ¡Soy demasiado listo para ustedes!',
+            info: 'El talento gana juegos, pero el trabajo en equipo y la inteligencia ganan campeonatos.',
             info_date: '05 de junio del 2016',
             hora: '04/04/2025',
             last_message: {
                 id: 5,
-                text: 'Buenas noches, como sigues?',
+                text: 'Estuve muy ataradeado en la semana.',
                 status: true,
             },
             unread_messages: 0,
             messages: [
                 {
-                    id: 1,
+                    id: 101,
                     emisor: 'YO',
                     hora: '04/04/2025',
                     text: 'Todo muy bien, y tu?',
                     status: true,
                 },
                 {
-                    id: 2,
+                    id: 102,
                     emisor: 'Michael Jordan',
                     hora: '04/04/2025',
                     text: 'Bien, ya casi termino la tarea de Front-End.',
@@ -172,30 +181,30 @@ const mook_data = {
         {
             id: 6,
             name: 'Porky',
-            image_route: alcaldeImg,
+            image_route: porkyImg,
             phone: '+54 662 823 5325',
-            info: '¡Alcalde quiere brindis!',
+            info: '¡Eso es todo, amigos!',
             info_date: '03 de agosto del 2014',
             hora: '25/05/2025',
             last_message: {
                 id: 6,
-                text: 'Hola, hoy es un día patrio. Podemos comer locro!',
+                text: 'Hoy es día patrio. Preparemos un buen locro!',
                 status: true,
             },
             unread_messages: 0,
             messages: [
                 {
-                    id: 1,
+                    id: 101,
                     emisor: 'YO',
                     hora: '25/05/2025',
-                    text: 'Si, me encanta la idea.',
+                    text: 'Buenas, como estás? Te parece bien si hacemos algo?',
                     status: true,
                 },
                 {
-                    id: 2,
+                    id: 102,
                     emisor: 'Porky',
                     hora: '25/05/2025',
-                    text: 'Perfecto, nos juntamos en casa de Mojo para cocinar.',
+                    text: 'Perfecto, nos juntamos en casa a cocinar?',
                     status: true,
                 },
             ],
@@ -203,30 +212,61 @@ const mook_data = {
         {
             id: 7,
             name: 'Tazmania',
-            image_route: beloImg,
+            image_route: tazImg,
             phone: '+54 321 523 2525',
-            info: '¡Oh señor alcalde, tenemos una emergencia!',
+            info: 'dgf#!(}*fgiufg$%$',
             info_date: '08 de Octubre del 2016',
             hora: '01/01/2025',
             last_message: {
                 id: 7,
-                text: 'Feliz año nuevo!',
+                text: 'Necesito que me expliques por favor!',
                 status: true,
             },
             unread_messages: 0,
             messages: [
                 {
-                    id: 1,
+                    id: 101,
                     emisor: 'YO',
                     hora: '23:13',
-                    text: 'Muchas gracias, igual para vos!',
+                    text: 'Qué te pasa Taz? No has ido a clase.',
                     status: true,
                 },
                 {
-                    id: 2,
+                    id: 102,
                     emisor: 'Tazmania',
                     hora: '23:16',
-                    text: 'Gracias, nos vemos pronto.',
+                    text: 'Estuve muy enfermo, recién me siento mejor.',
+                    status: true,
+                },
+            ],
+        },
+        {
+            id: 8,
+            name: 'Silvestre',
+            image_route: silvesImg,
+            phone: '+54 321 222 3235',
+            info: '¡Sufre, malaya, desgraciado!',
+            info_date: '09 Agosto del 2016',
+            hora: '03/02/2025',
+            last_message: {
+                id: 8,
+                text: 'Mañana te muestro lo que aprendí.',
+                status: true,
+            },
+            unread_messages: 0,
+            messages: [
+                {
+                    id: 101,
+                    emisor: 'YO',
+                    hora: '23:13',
+                    text: 'Como vas?',
+                    status: true,
+                },
+                {
+                    id: 102,
+                    emisor: 'Tazmania',
+                    hora: '23:16',
+                    text: 'Muy bien, hoy estuve ejercitandome.',
                     status: true,
                 },
             ],

@@ -1,29 +1,29 @@
-import react, { createContext } from "react"
+import React, { createContext, useState } from "react"
 import { getContactById } from "../Service/contactService"
-import { useState } from "react"
 
 export const ContactDetailContext = createContext({
     contactDetail: null,
-    loadContact: (contact_id) => {},
+    loadContact: () => {},
     isLoadingDetail: true,
 })
 
-const ContactDetailContextProvider = ({children}) => {
+const ContactDetailContextProvider = ({ children }) => {
     const [contactDetail, setContactDetail] = useState(null)
     const [isLoadingDetail, setIsLoadingDetail] = useState(true)
 
     const loadContact = (contact_id) => {
         setIsLoadingDetail(true)
-        setTimeout(
-            () => {
-                const contactSelected = getContactById(contact_id)
+        setTimeout(() => {
+            const contactSelected = getContactById(contact_id)
+            if (contactSelected) {
                 setContactDetail(contactSelected)
-                setIsLoadingDetail(false)
-            },
-            1000
-        )
-        
+            } else {
+                setContactDetail(null)
+            }
+            setIsLoadingDetail(false)
+        }, 1000)
     }
+
     return (
         <ContactDetailContext.Provider value={{
             loadContact: loadContact,

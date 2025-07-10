@@ -1,0 +1,13 @@
+@import '../NormalizeCSS/normalize.css';
+
+:root {
+    --color_backgroung_messages: #F5F1EB;
+    --color_no_msj: #6b7280;
+}
+
+.principal-chat-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color_backgroung_messages);
+}

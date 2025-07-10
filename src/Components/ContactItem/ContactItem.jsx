@@ -1,7 +1,7 @@
-import { Link } from "react-router";
-import "./ContactItem.css";
-import { IoCheckmarkDoneSharp } from "react-icons/io5";
-import { BiArchiveIn } from "react-icons/bi";
+import { Link } from "react-router"
+import "./ContactItem.css"
+import { IoCheckmarkDoneSharp } from "react-icons/io5"
+import { BiArchiveIn } from "react-icons/bi"
 
 export default function ContactItem({ id, name, image_route, last_message, hora, unread_messages, is_archived }) {
     return (
@@ -44,5 +44,5 @@ export default function ContactItem({ id, name, image_route, last_message, hora,
                 </Link>
             )}
         </div>
-    );
+    )
 }

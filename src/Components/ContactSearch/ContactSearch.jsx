@@ -8,9 +8,9 @@ export default function ContactSearchInput() {
     const [localTerm, setLocalTerm] = useState('')
 
     const handleChange = (e) => {
-        const val = e.target.value
-        setLocalTerm(val)
-        searchContacts(val)
+        const value = e.target.value
+        setLocalTerm(value)
+        searchContacts(value)
     }
 
     const handleClear = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCommentDots, FaRegCircle, FaUsers, FaBullhorn, FaCog } from "react-icons/fa";
 import "./Sidebar.css";
-import myPhoto from '../../Data/Images/mi-foto.jpeg'
+import myPhoto from '../../Data/Images/mi-foto.webp'
 
 export default function Sidebar() {
     return (

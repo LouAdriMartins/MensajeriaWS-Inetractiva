@@ -1,35 +1,40 @@
 @import '../NormalizeCSS/normalize.css';
 
-/* Variables de fondo claro */
+/* Variables globales */
 :root {
-    --color_principal_1: #22c55e;
-    --color_principal_2: #4ade80;
-    --color_principal_3: #15803d;
-    --color_principal_4: #16a34a;
-    --color_principal_5: #bbf7d0;
-    --color_principal_6: rgba(34,197,94,0.4);
-    --color_principal_7: rgba(34,197,94,0.3);
-    --color_secundario_1: rgba(0,0,0,0.1);
-    --color_secundario_2: rgba(0,0,0,0.15);
-    --color_secundario_3: #374151;
-    --color_secundario_4: rgba(255,255,255,255,0.3);
-    --color_secundario_5: #fff;
-    --color_secundario_6: #ddd;
+    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+
+    /* Colores principales */
+    --color-principal-1: #22c55e;
+    --color-principal-2: #4ade80;
+    --color-principal-3: #15803d;
+    --color-principal-4: #16a34a;
+    --color-principal-5: #bbf7d0;
+
+    /* Colores secundarios */
+    --color-secundario-1: #1a1a1a; /* para sombra oscura (equiv. rgba(0,0,0,0.1)) */
+    --color-secundario-2: #2a2a2a; /* para sombra más fuerte (equiv. rgba(0,0,0,0.15)) */
+    --color-secundario-3: #374151;
+    --color-secundario-4: #e6e6e6; /* para transparencia blanca (equiv. rgba(255,255,255,0.3)) */
+    --color-secundario-5: #ffffff;
+    --color-secundario-6: #dddddd;
 }
 
+/* ------------------------------------------------Container principal------------------------------------------------ */
 .loading-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    background: linear-gradient(135deg, var(--color-secundario-5) 0%, var(--color-secundario-6) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #fff 0%, #ddd 100%);
     z-index: 9999;
     margin: 0;
     padding: 0;
+    font-family: var(--font-family-base);
 }
 
 .loading-content {
@@ -39,22 +44,21 @@
     gap: 1.5rem;
 }
 
-/* Logo container */
+/* Logo */
 .logo-container {
     position: relative;
 }
 
 .logo-wrapper {
     position: relative;
-    /* Remover la animación de escala y rotación */
     animation: none;
 }
 
 .logo-background {
-    background-color: #22c55e;
+    background-color: var(--color-principal-1);
     border-radius: 50%;
     padding: 1.5rem;
-    box-shadow: 0 10px 25px #374151;
+    box-shadow: 0 10px 25px var(--color-secundario-3);
     animation: logoGlow 2s ease-in-out infinite;
     display: flex;
     align-items: center;
@@ -63,7 +67,6 @@
     overflow: hidden;
 }
 
-/* Agregar efecto de destello */
 .logo-background::before {
     content: "";
     position: absolute;
@@ -79,20 +82,20 @@
 .logo-icon {
     width: 3rem;
     height: 3rem;
-    color: white;
+    color: var(--color-secundario-5);
 }
 
-/* Cambiar la animación del pulso para que sea más sutil */
+/* Pulso sutil */
 .pulse-effect {
     position: absolute;
     inset: 0;
-    background-color: #4ade80;
+    background-color: var(--color-principal-2);
     border-radius: 50%;
     opacity: 0.2;
     animation: subtlePulse 2.5s ease-in-out infinite;
 }
 
-/* Texto de carga */
+/* Texto */
 .text-container {
     text-align: center;
     animation: textFade 1.5s ease-in-out infinite;
@@ -101,15 +104,15 @@
 .title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #15803d;
+    color: var(--color-principal-3);
     margin-bottom: 0.5rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+    font-family: var(--font-family-base);
 }
 
 .subtitle {
-    color: #16a34a;
+    color: var(--color-principal-4);
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+    font-family: var(--font-family-base);
 }
 
 /* Puntos de carga */
@@ -121,19 +124,17 @@
 .dot {
     width: 0.75rem;
     height: 0.75rem;
-    background-color: #22c55e;
+    background-color: var(--color-principal-1);
     border-radius: 50%;
     animation: dotBounce 0.8s ease-in-out infinite;
 }
 
 .dot-1 {
-    animation-delay: 0s; 
+    animation-delay: 0s;
 }
-
 .dot-2 {
     animation-delay: 0.2s;
 }
-
 .dot-3 {
     animation-delay: 0.4s;
 }
@@ -142,21 +143,19 @@
 .spinner-circle {
     width: 4rem;
     height: 4rem;
-    border: 4px solid #bbf7d0;
-    border-top: 4px solid #22c55e;
+    border: 4px solid var(--color-principal-5);
+    border-top: 4px solid var(--color-principal-1);
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
 
 /* Animaciones */
-
 @keyframes logoGlow {
-    0%,
-    100% {
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(34, 197, 94, 0.4);
+    0%, 100% {
+        box-shadow: 0 10px 25px var(--color-secundario-1), 0 0 0 0 var(--color-principal-6);
     }
     50% {
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 0 20px 5px rgba(34, 197, 94, 0.3);
+        box-shadow: 0 15px 35px var(--color-secundario-2), 0 0 20px 5px var(--color-principal-7);
     }
 }
 
@@ -172,21 +171,8 @@
     }
 }
 
-@keyframes sparkle {
-    0%,
-    100% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 @keyframes subtlePulse {
-    0%,
-    100% {
+    0%, 100% {
         transform: scale(1);
         opacity: 0.2;
     }
@@ -197,8 +183,7 @@
 }
 
 @keyframes textFade {
-    0%,
-    100% {
+    0%, 100% {
         opacity: 0.5;
     }
     50% {
@@ -207,8 +192,7 @@
 }
 
 @keyframes dotBounce {
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0);
         opacity: 0.4;
     }
@@ -227,25 +211,21 @@
     }
 }
 
-/* Responsive */
+/* ----------------------------------------------------Responsive---------------------------------------------------- */
 @media (max-width: 768px) {
     .loading-content {
         gap: 1rem;
     }
-
     .logo-background {
         padding: 1rem;
     }
-
     .logo-icon {
         width: 2rem;
         height: 2rem;
     }
-
     .title {
         font-size: 1.25rem;
     }
-
     .spinner-circle {
         width: 3rem;
         height: 3rem;

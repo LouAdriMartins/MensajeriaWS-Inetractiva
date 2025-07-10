@@ -1,9 +1,7 @@
 //--------------------------------------------CREACIÓN DE CONTEXTO-MENSAJES----------------------------------------------------------
 /* Archivo: src/Context/MessageContext.jsx
     Este archivo contiene la función de estado que renderiza los mensajes en la pantalla de chat. En este caso, se simula una llamada a un servicio getMessagesByContactId que retorna una lista de mensajes para un contacto específico. Además, se usa la función setTimeout para simular un retraso en la carga de los mensajes, para lo cual se creo un spinner de carga de WhatsApp.
-
-- Componentes que consumen este contexto: 
-    Chat, Message, NewMessageForm, MessagesScreen */
+*/
 //------------------------------------------------------------------------------------------------------------------------------------
 import React, { createContext } from "react"
 import { useState } from "react"

@@ -15,4 +15,5 @@
     font-size: 16px;
     color: var(--color_texto_buscador);
     text-align: center;
+    opacity: 0.8;
 }

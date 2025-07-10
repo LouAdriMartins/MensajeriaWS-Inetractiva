@@ -29,24 +29,24 @@ const HomeContactContextProvider = ({ children }) => {
         setTimeout(() => {
         setContacts(initialContacts)
         setIsLoadingContacts(false)
-        }, 2000)
+        }, 1000)
     }, [])
 
     useEffect(() => {
         let filtered = contacts
         // Filtro búsqueda
         if (searchTerm.trim() !== '') {
-        filtered = filtered.filter(c =>
-            c.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
+            filtered = filtered.filter(c =>
+                c.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
         )
         }
         // Filtro categoría
         if (filter === 'no-leidos') {
-        filtered = filtered.filter(c => c.unread_messages > 0)
+            filtered = filtered.filter(c => c.unread_messages > 0)
         } else if (filter === 'favoritos') {
-        filtered = filtered.filter(c => c.isFavorite)
+            filtered = filtered.filter(c => c.isFavorite)
         } else if (filter === 'grupos') {
-        filtered = filtered.filter(c => c.isGroup)
+            filtered = filtered.filter(c => c.isGroup)
         }
         setFilteredContacts(filtered)
     }, [contacts, searchTerm, filter])

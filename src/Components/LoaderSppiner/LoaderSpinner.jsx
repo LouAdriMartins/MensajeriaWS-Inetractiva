@@ -1,42 +1,41 @@
-import React from "react"
-import "./LoaderSpinner.css"
-import WhatsAppIcon from "./WhatsAppIcon"
+import React from "react";
+import "./LoaderSpinner.css";
+import WhatsAppIcon from "./WhatsAppIcon";
 
-const LoaderSpinner = ({ isLoading = true }) => {
-    if (!isLoading) return null
+export default function LoaderSpinner({ isLoading = true }) {
+    if (!isLoading) return null;
 
     return (
-        <div className="loading-container">
+        <div
+            className="loading-container"
+            role="alert"
+            aria-busy="true"
+            aria-label="Cargando"
+        >
             <div className="loading-content">
-                {/* Logo de WhatsApp con animaciones */}
                 <div className="logo-container">
                     <div className="logo-wrapper">
                         <div className="logo-background">
                             <WhatsAppIcon className="logo-icon" />
                         </div>
-                        {/* Efecto de pulso adicional */}
+
                         <div className="pulse-effect" />
                     </div>
-                </div>
+                </div> 
 
-                {/* Texto de carga */}
                 <div className="text-container">
                     <h2 className="title">WhatsApp</h2>
                     <p className="subtitle">Cargando...</p>
                 </div>
 
-                {/* Puntos de carga animados */}
                 <div className="dots-container">
-                    <div className="dot dot-1"></div>
-                    <div className="dot dot-2"></div>
-                    <div className="dot dot-3"></div>
+                    <div className="dot dot-1" />
+                    <div className="dot dot-2" />
+                    <div className="dot dot-3" />
                 </div>
 
-                {/* Spinner circular */}
-                <div className="spinner-circle"></div>
-            </div>
+                <div className="spinner-circle" />
+            </div> 
         </div>
     )
 }
-
-export default LoaderSpinner

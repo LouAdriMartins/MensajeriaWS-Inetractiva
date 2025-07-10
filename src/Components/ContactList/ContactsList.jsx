@@ -17,9 +17,9 @@ export default function ContactsList() {
         return new Date(`${year}-${month}-${day}`)
     }
 
-    // Ordenar contactos por fecha descendente
+    // Ordenar contactos por fecha descendente comparandolos
     const sortedContacts = [...filteredContacts].sort(
-        (a, b) => parseDate(b.hora) - parseDate(a.hora)
+        (contact_a, contact_b) => parseDate(contact_b.hora) - parseDate(contact_a.hora)
     )
 
     // Contacto ficticio "Archivados" al inicio
@@ -36,9 +36,13 @@ export default function ContactsList() {
     return (
         <div className="contacts-list">
             <ContactItem {...archivedContact} />
-            {sortedContacts.map(contact => (
-                <ContactItem key={contact.id} {...contact} />
-            ))}
+            {sortedContacts.length === 0 ? (
+                <div className="no-chats-message">No se encontraron contactos con este nombre!</div>
+            ) : (
+                sortedContacts.map(contact => (
+                    <ContactItem key={contact.id} {...contact} />
+                ))
+            )}
         </div>
     )
 }
