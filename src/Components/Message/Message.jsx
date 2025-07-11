@@ -28,7 +28,7 @@ export default function Message({ emisor, hora, id, text, status }) {
                         </span>
                         )}
                         <button onClick={() => handleDeleteMessages(id)} className="delete-btn" aria-label="Eliminar mensaje">
-                        <AiOutlineDelete size={16} />
+                            <AiOutlineDelete size={16} />
                         </button>
                     </span>
                 </span>
