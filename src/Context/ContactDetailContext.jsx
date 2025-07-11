@@ -1,3 +1,8 @@
+//----------------------------------------CREACIÓN DE CONTEXTO-DETALLE DE CONTACTO----------------------------------------
+/* Archivo: src/Context/ContactDetailContext.jsx
+
+    Este archivo contiene la función de estado que renderiza a cada contacto según corresponda en la pantalla. En este caso, se simula una llamada a un servicio getContactById que retorna los contactos por su id. Además, se usa la función setTimeout para simular un retraso en la carga de los contactos, para lo cual se creo un spinner de carga de WhatsApp.*/
+//------------------------------------------------------------------------------------------------------------------------------------
 import React, { createContext, useState } from "react"
 import { getContactById } from "../Service/contactService"
 
