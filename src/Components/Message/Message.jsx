@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { MessageContext } from "../../Context/MessageContext"
 import { IoCheckmarkDoneOutline, IoCheckmarkOutline } from "react-icons/io5"
 import { AiOutlineDelete } from "react-icons/ai"
-import "./message.css"
+import "./Message.css"
 
 export default function Message({ emisor, hora, id, text, status }) {
     const { handleDeleteMessages } = useContext(MessageContext)
