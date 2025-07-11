@@ -1,3 +1,7 @@
+Final - FrontEnd.
+Profs: Matias Gimenez - Lautaro Miceli.
+Estudiante: Lourdes Adriana Martins Rodríguez.
+
 # Desafío de creación de WhatsApp
 
 ## Librerías usadas
