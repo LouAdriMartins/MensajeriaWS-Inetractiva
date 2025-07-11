@@ -22,7 +22,7 @@ export default function ChatList() {
     return (
         <div className='principal-chat-screen'>
             <ContactDetailHeader />
-            <Chat />
+            <Chat className='chat-total' />
             <NewMessageForm className='principal-chat-screen--message-form'/>
         </div>
     )

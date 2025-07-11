@@ -12,15 +12,20 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 100%;
     padding: 12px 42px;
     color: var(--color_no_msj);
 }
 
 .empty-chat {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 12px 42px;
     color: var(--color_no_msj);
+    min-height: 0;
 }
 
 /* ------------------------------------------ Responsive ------------------------------------------ */
